@@ -19,7 +19,8 @@ public class Player_Shoot : MonoBehaviour
         if(Input.GetButtonUp("Fire2"))
         {
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
-            ball.GetComponent<Ball_Activate>().direction = gameObject.GetComponent<Player_Movement>().direction;
+            ball.GetComponent<Ball_Activate>().direction = gameObject.transform.up;//gameObject.GetComponent<Player_Movement>().direction;
+            ball.GetComponent<Ball_Activate>().player = gameObject;
         }
     }
 }
