@@ -6,6 +6,7 @@ public class Player_Shoot : MonoBehaviour
 {
     Player_PointsTracker totalPoints;
     public GameObject pointBall;
+    [SerializeField] string fireInputAxis;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class Player_Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp("Fire2"))
+        if(Input.GetButtonUp(fireInputAxis))
         {
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
             ball.GetComponent<Ball_Activate>().direction = gameObject.transform.up;//gameObject.GetComponent<Player_Movement>().direction;

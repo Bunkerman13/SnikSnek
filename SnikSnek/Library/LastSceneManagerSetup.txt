@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/AbsorptionTesting.unity
+- path: Assets/Scenes/TestWin.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
