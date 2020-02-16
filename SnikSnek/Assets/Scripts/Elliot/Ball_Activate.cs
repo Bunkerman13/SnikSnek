@@ -23,4 +23,14 @@ public class Ball_Activate : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Player" && collision.gameObject != player)
+        {
+            player.GetComponent<Player_PointsTracker>().totalPoints--;
+            collision.gameObject.GetComponent<Player_PointsTracker>().totalPoints++;
+            Destroy(gameObject);
+        }
+    }
+
 }
