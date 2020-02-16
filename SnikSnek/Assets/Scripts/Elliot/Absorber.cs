@@ -21,7 +21,9 @@ public class Absorber : MonoBehaviour
         if(collision.gameObject.tag == "Bullet")
         {
             // decrements players points
-            collision.gameObject.GetComponent<Ball_Activate>().player.GetComponent<Player_PointsTracker>().totalPoints--;
+            Player_PointsTracker pointTracker = collision.gameObject.GetComponent<Ball_Activate>().player.GetComponent<Player_PointsTracker>();
+            
+            if (pointTracker) pointTracker.TotalPoints--;
 
             Destroy(collision.gameObject);
         }

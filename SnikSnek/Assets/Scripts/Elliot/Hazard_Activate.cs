@@ -25,7 +25,7 @@ public class Hazard_Activate : MonoBehaviour
         // if collides with player, increment player points
         if(collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player_PointsTracker>().totalPoints++;
+            collision.gameObject.GetComponent<Player_PointsTracker>().TotalPoints++;
 
             Destroy(gameObject);
         }

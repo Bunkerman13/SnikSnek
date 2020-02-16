@@ -380,7 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8005c634318f942a5dde09e03f6262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 0
+  shootPeriod: 1
+  startDelay: 1.5
   pointBall: {fileID: 8116489945942251458, guid: 4940bc0d595e2f7489116ff90d55508e,
     type: 3}
   absorber: {fileID: 7731511160188745410, guid: 4f364830db97fb74e81dbd6c09aea292,
@@ -1038,7 +1039,7 @@ PrefabInstance:
     - target: {fileID: 1399363730934201945, guid: 8af5bbb99f608c042a08a8e953ebc49a,
         type: 3}
       propertyPath: fireInputAxis
-      value: Fire2
+      value: Fire1
       objectReference: {fileID: 0}
     - target: {fileID: 1399363730934201946, guid: 8af5bbb99f608c042a08a8e953ebc49a,
         type: 3}
@@ -1447,7 +1448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8005c634318f942a5dde09e03f6262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 0
+  shootPeriod: 1
+  startDelay: 1.5
   pointBall: {fileID: 8116489945942251458, guid: 4940bc0d595e2f7489116ff90d55508e,
     type: 3}
   absorber: {fileID: 7731511160188745410, guid: 4f364830db97fb74e81dbd6c09aea292,
@@ -2000,6 +2002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201945, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: fireInputAxis
+      value: Jump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}

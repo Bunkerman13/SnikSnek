@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class Player_Shoot : MonoBehaviour
 {
-    Player_PointsTracker totalPoints;
+    Player_PointsTracker pointTracker;
     public GameObject pointBall;
     [SerializeField] string fireInputAxis;
 
     // Start is called before the first frame update
     void Start()
     {
-        totalPoints = GetComponent<Player_PointsTracker>();
+        pointTracker = GetComponent<Player_PointsTracker>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp(fireInputAxis))
+        if(Input.GetButtonUp(fireInputAxis) && pointTracker.ShoootWorthy())
         {
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
-            ball.GetComponent<Ball_Activate>().direction = gameObject.transform.up;//gameObject.GetComponent<Player_Movement>().direction;
-            ball.GetComponent<Ball_Activate>().player = gameObject;
+            Ball_Activate bulletScript = ball.GetComponent<Ball_Activate>();
+
+            bulletScript.startPosition = gameObject.transform.up;//gameObject.GetComponent<Player_Movement>().direction;
+            bulletScript.player = gameObject;
+            bulletScript.pointTracker = pointTracker;
+
+            pointTracker.BullletCount++;
         }
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Ball_Activate : MonoBehaviour
 {
-    public Vector3 direction;
+    public Vector3 startPosition;
+    public Player_PointsTracker pointTracker;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -17,11 +18,11 @@ public class Ball_Activate : MonoBehaviour
     void Update()
     {
         // sets the direction and movement of bullet based on player direction/position
-        Vector3 newDirection = new Vector3(transform.position.x + (direction.normalized.x * .08f), transform.position.y + (direction.normalized.y * .08f), 0);
-        transform.position = newDirection;
+        Vector3 currentPosition = new Vector3(transform.position.x + (startPosition.normalized.x * .08f), transform.position.y + (startPosition.normalized.y * .08f), 0);
+        transform.position = currentPosition;
 
         // destroys gameobject after it reaches a certain distance
-        if (Vector3.Magnitude(direction - newDirection) > 5)
+        if (Vector3.Magnitude(startPosition - currentPosition) > 5)
             Destroy(gameObject);
     }
 
@@ -30,10 +31,14 @@ public class Ball_Activate : MonoBehaviour
         // If it collides with a different player, increment them and decrement the local players' points
         if(collision.transform.tag == "Player" && collision.gameObject != player)
         {
-            player.GetComponent<Player_PointsTracker>().totalPoints--;
-            collision.gameObject.GetComponent<Player_PointsTracker>().totalPoints++;
+            pointTracker.TotalPoints--;
+            collision.gameObject.GetComponent<Player_PointsTracker>().TotalPoints++;
             Destroy(gameObject);
         }
     }
 
+    private void OnDestroy()
+    {
+        pointTracker.BullletCount--;
+    }
 }
