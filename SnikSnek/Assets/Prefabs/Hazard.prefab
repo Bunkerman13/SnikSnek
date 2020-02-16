@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2743407558534652083}
   - component: {fileID: 4962705637106489829}
   - component: {fileID: 8285027673770566609}
-  - component: {fileID: 8882082192798202960}
-  - component: {fileID: -5301576949181415883}
+  - component: {fileID: -4616263805491042825}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Hazard
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.7169812, g: 0.26717696, b: 0.26717696, a: 1}
+  m_Color: {r: 0.5954525, g: 0.26666668, b: 0.7176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +98,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &8882082192798202960
+--- !u!114 &-4616263805491042825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,29 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8116489945942251458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7e5be16af3e2145854e5fbcfc2e7c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 78fbe50827a7e4949a066e1c85145322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  player: {fileID: 0}
---- !u!50 &-5301576949181415883
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8116489945942251458}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

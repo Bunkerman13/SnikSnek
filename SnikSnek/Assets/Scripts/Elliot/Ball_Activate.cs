@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball_Activate : MonoBehaviour
 {
     public Vector3 direction;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -21,4 +22,5 @@ public class Ball_Activate : MonoBehaviour
         if (Vector3.Magnitude(direction - newDirection) > 5)
             Destroy(gameObject);
     }
+
 }

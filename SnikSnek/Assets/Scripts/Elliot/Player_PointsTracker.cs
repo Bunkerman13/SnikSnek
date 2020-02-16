@@ -10,12 +10,12 @@ public class Player_PointsTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponentInChildren<Text>().text = totalPoints.ToString();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GetComponentInChildren<Text>().text = totalPoints.ToString();
     }
 }

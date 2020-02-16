@@ -20,6 +20,7 @@ public class Player_Shoot : MonoBehaviour
         {
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
             ball.GetComponent<Ball_Activate>().direction = gameObject.GetComponent<Player_Movement>().direction;
+            ball.GetComponent<Ball_Activate>().player = gameObject;
         }
     }
 }
