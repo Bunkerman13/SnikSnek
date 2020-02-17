@@ -17,8 +17,10 @@ public class Player_Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonUp(fireInputAxis) && pointTracker.ShoootWorthy())
+        if(Input.GetButtonDown(fireInputAxis) && pointTracker.ShoootWorthy())
         {
+            Debug.Log(gameObject.name + " | " + fireInputAxis);
+
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
             Ball_Activate bulletScript = ball.GetComponent<Ball_Activate>();
 
