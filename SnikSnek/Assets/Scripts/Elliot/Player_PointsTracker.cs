@@ -25,7 +25,7 @@ public class Player_PointsTracker : MonoBehaviour
         return false;
     }
 
-    static public void TimeUp()
+    static public void GameEnd()
     {
         PlayerPrefs.SetString("Victor", winnnerId.ToString());
         SceneManager.LoadScene("TestEnd");
@@ -41,7 +41,7 @@ public class Player_PointsTracker : MonoBehaviour
             points = value;
             if (CheckForHighest(iD, points))
             {
-                OnDestroy(); //Fun way to end scene
+                GameEnd(); //Fun way to end scene
             }
         }
         get
@@ -64,11 +64,5 @@ public class Player_PointsTracker : MonoBehaviour
     void Update()
     {
         GetComponentInChildren<Text>().text = points.ToString();
-    }
-
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetString("Victor", winnnerId.ToString());
-        SceneManager.LoadScene("TestEnd");
     }
 }

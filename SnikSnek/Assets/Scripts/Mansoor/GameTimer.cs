@@ -25,7 +25,7 @@ public class GameTimer : MonoBehaviour
 
         if(currTime <= 0)
         {
-            Player_PointsTracker.TimeUp();
+            Player_PointsTracker.GameEnd();
         }
         int minutes = (int)currTime / 60;
         int seconds = (int)currTime - 60 * minutes;

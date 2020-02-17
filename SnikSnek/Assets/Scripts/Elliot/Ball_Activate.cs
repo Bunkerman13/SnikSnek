@@ -5,20 +5,21 @@ using UnityEngine;
 public class Ball_Activate : MonoBehaviour
 {
     public Vector3 startPosition;
+    public Vector3 direction;
     public Player_PointsTracker pointTracker;
     public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        //direction = new Vector3();
+        direction.Normalize();
     }
 
     // Update is called once per frame
     void Update()
     {
         // sets the direction and movement of bullet based on player direction/position
-        Vector3 currentPosition = new Vector3(transform.position.x + (startPosition.normalized.x * .08f), transform.position.y + (startPosition.normalized.y * .08f), 0);
+        Vector3 currentPosition = new Vector3(transform.position.x + (direction.x * .08f), transform.position.y + (direction.y * .08f), 0);
         transform.position = currentPosition;
 
         // destroys gameobject after it reaches a certain distance

@@ -22,7 +22,8 @@ public class Player_Shoot : MonoBehaviour
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
             Ball_Activate bulletScript = ball.GetComponent<Ball_Activate>();
 
-            bulletScript.startPosition = gameObject.transform.up;//gameObject.GetComponent<Player_Movement>().direction;
+            bulletScript.startPosition = transform.position;
+            bulletScript.direction = transform.up;//gameObject.GetComponent<Player_Movement>().direction;
             bulletScript.player = gameObject;
             bulletScript.pointTracker = pointTracker;
 
