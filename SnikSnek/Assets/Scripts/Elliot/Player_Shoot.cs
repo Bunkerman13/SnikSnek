@@ -19,8 +19,6 @@ public class Player_Shoot : MonoBehaviour
     {
         if(Input.GetButtonDown(fireInputAxis) && pointTracker.ShoootWorthy())
         {
-            Debug.Log(gameObject.name + " | " + fireInputAxis);
-
             GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
             Ball_Activate bulletScript = ball.GetComponent<Ball_Activate>();
 
