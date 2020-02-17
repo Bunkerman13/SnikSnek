@@ -18,7 +18,7 @@ public class VictorDisplay : MonoBehaviour
         }
         else
         {
-            t.text = "Player " + victor + " won.";
+            t.text = victor + " win.";
         }
         t.text += "\nPresss Enter to continue";
     }

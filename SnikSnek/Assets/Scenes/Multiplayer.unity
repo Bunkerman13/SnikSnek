@@ -228,6 +228,11 @@ PrefabInstance:
       propertyPath: vertInputAxis
       value: Vertical
       objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201950, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: iD
+      value: Paink
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}
 --- !u!4 &198117746 stripped
@@ -930,6 +935,11 @@ PrefabInstance:
       propertyPath: speed
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201950, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: iD
+      value: Yenlo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}
 --- !u!1001 &865423781
@@ -1038,6 +1048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201950, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: iD
+      value: Blupe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}
@@ -1487,6 +1502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201950, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: iD
+      value: Reb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}
@@ -2458,6 +2478,11 @@ PrefabInstance:
         type: 3}
       propertyPath: vertInputAxis
       value: Vertical1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399363730934201950, guid: 8af5bbb99f608c042a08a8e953ebc49a,
+        type: 3}
+      propertyPath: iD
+      value: Gren
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af5bbb99f608c042a08a8e953ebc49a, type: 3}

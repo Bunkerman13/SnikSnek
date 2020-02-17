@@ -56,7 +56,7 @@ public class Player_PointsTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        iD = GetComponent<Player_Identifier>().iD.ToString();
+        iD = GetComponent<Player_Identifier>().iD;
         winnnerId = iD;
     }
 
