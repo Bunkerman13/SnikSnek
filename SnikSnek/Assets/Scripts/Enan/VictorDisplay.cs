@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class VictorDisplay : MonoBehaviour
 {
+    public string startSceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class VictorDisplay : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Multiplayer");
+            SceneManager.LoadScene(startSceneName);
         }
     }
 }

@@ -24,6 +24,12 @@ public class Player_PointsTracker : MonoBehaviour
         }
         return false;
     }
+
+    static public void TimeUp()
+    {
+        PlayerPrefs.SetString("Victor", winnnerId.ToString());
+        SceneManager.LoadScene("TestEnd");
+    }
     #endregion
 
     float points;
