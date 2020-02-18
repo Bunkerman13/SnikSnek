@@ -111,8 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e5be16af3e2145854e5fbcfc2e7c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
+  pointTracker: {fileID: 0}
   player: {fileID: 0}
+  speeed: 0.1
 --- !u!50 &-5301576949181415883
 Rigidbody2D:
   serializedVersion: 4

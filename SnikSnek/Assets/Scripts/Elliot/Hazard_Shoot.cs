@@ -7,8 +7,8 @@ public class Hazard_Shoot : MonoBehaviour
 
     public float shootPeriod;
     public float startDelay;
-    public GameObject pointBall;
-    public GameObject absorber;
+    public GameObject shot;
+    public float probability;
 
     float time;
     // Start is called before the first frame update
@@ -32,16 +32,17 @@ public class Hazard_Shoot : MonoBehaviour
         {
         //*/
             // random value that determines if an absorber ball is shot
-            int shootAbsorber = Random.Range(1, 11);
-            if (shootAbsorber != 10)
+            float willShoot = Random.Range(0, 1f);
+            if (willShoot < probability)
             {
-                GameObject ball = Instantiate(pointBall, transform.position, Quaternion.identity);
-                ball.GetComponent<Hazard_Activate>().direction = Vector3.zero - transform.position;
-            }
-            else
-            {
-                GameObject absorb = Instantiate(absorber, transform.position, Quaternion.identity);
-                absorb.GetComponent<Absorber_Movement>().direction = Vector3.zero - transform.position;
+                GameObject ball = Instantiate(shot, transform.position, Quaternion.identity);
+                if (ball.GetComponent<Hazard_Activate>()) {
+                    ball.GetComponent<Hazard_Activate>().direction = transform.up;
+                }
+                else
+                {
+                    ball.GetComponent<Absorber_Movement>().direction = transform.up;
+                }
             }
         }
     }

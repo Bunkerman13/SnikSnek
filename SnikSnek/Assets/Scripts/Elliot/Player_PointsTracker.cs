@@ -8,7 +8,7 @@ public class Player_PointsTracker : MonoBehaviour
 {
     #region Static stufff for tracking who's in the lead
     static string winnnerId;
-    static float lowScore;
+    static float lowScore = 1;
 
     static bool CheckForHighest(string id, float points)
     {
@@ -22,12 +22,14 @@ public class Player_PointsTracker : MonoBehaviour
             winnnerId = id;
             lowScore = points;
         }
+        print(winnnerId);
         return false;
     }
 
     static public void GameEnd()
     {
-        PlayerPrefs.SetString("Victor", winnnerId.ToString());
+        //print("bye");
+        PlayerPrefs.SetString("Victor", winnnerId);
         SceneManager.LoadScene("TestEnd");
     }
     #endregion
@@ -57,7 +59,7 @@ public class Player_PointsTracker : MonoBehaviour
     void Start()
     {
         iD = GetComponent<Player_Identifier>().iD;
-        winnnerId = iD;
+        CheckForHighest(iD, 0);
     }
 
     // Update is called once per frame
